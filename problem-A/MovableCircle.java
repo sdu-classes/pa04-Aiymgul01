@@ -1,36 +1,35 @@
-package com.company;
+public class MovableCircle implements Movable {
+    private int radius;
+    private MovablePoint center;
 
-public class MovableCircle implements Movaable{
-    int radius;
-    MoveablePoint center;
-    public MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius){
-        this.center = new MoveablePoint(x,y,xSpeed,ySpeed);
-        this.radius=radius;
+    public MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius) {
+        center = new MovablePoint(x, y, xSpeed, ySpeed);
+        this.radius = radius;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, radius = %s", this.center.toString(), this.radius);
     }
 
     @Override
     public void moveUp() {
-        center.moveUp();
+        this.center.moveUp();
     }
 
     @Override
     public void moveDown() {
-        center.moveDown();
-
+        this.center.moveDown();
     }
 
     @Override
     public void moveLeft() {
-        center.moveLeft();
-
+        this.center.moveLeft();
     }
 
     @Override
     public void moveRight() {
-        center.moveRight();
+        this.center.moveRight();
     }
-    public String toString(){
-        return center.toString()+", radius = "+radius+"";
 
-    }
 }
