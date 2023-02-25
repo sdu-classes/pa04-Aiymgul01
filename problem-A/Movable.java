@@ -1,9 +1,8 @@
-package com.company;
+public interface Movable {
+    public void moveUp();
 
-public interface Movaable {
-    void moveUp();
-    void moveDown();
-    void moveLeft();
-    void moveRight();
+    public void moveDown();
 
-}
+    public void moveLeft();
+
+    public void moveRight();
