@@ -3,33 +3,33 @@ public class MovableCircle implements Movable {
     private MovablePoint center;
 
     public MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius) {
-        center = new MovablePoint(x, y, xSpeed, ySpeed);
+        this.center = new MovablePoint(x, y, xSpeed, ySpeed);
         this.radius = radius;
     }
 
     @Override
-    public String toString() {
-        return String.format("%s, radius = %s", this.center.toString(), this.radius);
-    }
-
-    @Override
     public void moveUp() {
-        this.center.moveUp();
+        center.moveUp();
     }
 
     @Override
     public void moveDown() {
-        this.center.moveDown();
-    }
-
-    @Override
-    public void moveLeft() {
-        this.center.moveLeft();
+        center.moveDown();
     }
 
     @Override
     public void moveRight() {
-        this.center.moveRight();
+        center.moveRight();
+    }
+
+    @Override
+    public void moveLeft() {
+        center.moveLeft();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s, radius=%d", center.toString(),  radius);
     }
 
 }
